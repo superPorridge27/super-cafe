@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius: 0.75rem;
+
+  --font-sans: var(--font-inter);
+  --font-space: var(--font-space);
+}
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #f8f9fa;
+  --card: #ffffff;
+  --card-foreground: #0a0a0a;
+  --popover: #ffffff;
+  --popover-foreground: #0a0a0a;
+  --primary: #c084fc;
+  /* Nebula from previous hsl */
+  --primary-foreground: #f8f9fa;
+  --secondary: #27272a;
+  --secondary-foreground: #f8f9fa;
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+  --accent: #27272a;
+  --accent-foreground: #f8f9fa;
+  --destructive: #ef4444;
+  --destructive-foreground: #f8f9fa;
+  --border: #27272a;
+  --input: #27272a;
+  --ring: #c084fc;
+}
+
+body {
+  @apply bg-background text-foreground font-sans;
+}
+
+@utility glass {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl;
+}
+
+@utility glass-panel {
+  @apply bg-[#0a0a0a]/80 backdrop-blur-lg border-l border-white/10;
+}
